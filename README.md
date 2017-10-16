@@ -32,7 +32,7 @@ Latest release:
 <dependency>
   <groupId>com.github.dzieciou.testing</groupId>
   <artifactId>curl-logger</artifactId>
-  <version>1.0.2</version>
+  <version>2.0.0</version>
 </dependency>
 ```
    
@@ -258,7 +258,7 @@ only prints warning (https://github.com/dzieciou/curl-logger/issues/13)
 
 1.0.1:
 * Bug fix: `CurlLoggingRestAssuredConfigBuilder` was not updating `RestAssuredConfig` properly 
-(https://github.com/dzieciou/curl-logger/issues/4): 
+(https://github.com/dzieciou/curl-logger/issues/4)
 
 1.0.0:
 
