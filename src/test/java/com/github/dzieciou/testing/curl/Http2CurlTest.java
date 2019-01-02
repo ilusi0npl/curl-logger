@@ -30,6 +30,13 @@ public class Http2CurlTest {
   }
 
   @Test
+  public void shouldPrintGetRequestForHttpsProperly() throws Exception {
+    HttpGet getRequest = new HttpGet("https://test.com:8080/items/query?x=y#z");
+    assertThat(getNonWindowsHttp2Curl().generateCurl(getRequest),
+        equalTo("curl 'https://test.com:8080/items/query?x=y#z' --compressed -k -v"));
+  }
+
+  @Test
   public void shouldPrintBasicAuthnUserCredentials() throws Exception {
     HttpGet getRequest = new HttpGet("http://test.com:8080/items/query?x=y#z");
     String encodedCredentials = Base64.getEncoder().encodeToString("xx:yy".getBytes());

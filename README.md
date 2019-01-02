@@ -249,6 +249,8 @@ curl 'http://somehost.com/uploadFile' -F 'myfile=@README.md;type=application/jso
 ## Releases
 
 1.0.4:
+* Bug fix: HTTPS protocol was not always recognized correctly 
+(https://github.com/dzieciou/curl-logger/issues/17). Many thanks to pafitchett-ks for troubleshooting.
 * Support slf4j 1.8.0-beta2.
 * Support rest-assured 3.2.0. 
 

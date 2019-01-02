@@ -180,7 +180,7 @@ public class Http2Curl {
       String inferredScheme = "http";
       if (host.endsWith(":443")) {
         inferredScheme = "https";
-      } else if (request instanceof RequestWrapper) {
+      } else if ((request instanceof RequestWrapper) || (request instanceof HttpRequestWrapper)) {
         if (getOriginalRequestUri(request).startsWith("https")) {
           // This is for original URL, so if during redirects we go out of HTTPs, this might be a wrong guess
           inferredScheme = "https";
